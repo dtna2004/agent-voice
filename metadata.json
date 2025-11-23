@@ -1,0 +1,7 @@
+{
+  "name": "PixelVoice Agent",
+  "description": "An AI-powered image editing agent that executes edits based on voice commands or text instructions.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
