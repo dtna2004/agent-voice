@@ -6,11 +6,16 @@ export interface ChatMessage {
   imageUrl?: string; // If the message results in a new image state
 }
 
+export interface HistoryItem {
+  id: string;
+  imageBase64: string;
+  prompt: string; // The command that created this version
+  timestamp: number;
+}
+
 export interface ImageState {
-  original: string; // Base64
-  current: string; // Base64
-  history: string[]; // Array of Base64 strings for undo
-  historyIndex: number;
+  items: HistoryItem[];
+  currentIndex: number;
 }
 
 export enum AppStatus {
